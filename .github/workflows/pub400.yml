@@ -23,5 +23,5 @@ jobs:
         PUB400_USERNAME: ${{ secrets.PUB400_USERNAME }}
         PUB400_PASSWORD: ${{ secrets.PUB400_PASSWORD }}
         PUB400_HOST: ${{ secrets.PUB400_HOST }}
-      run: |
+      run: | 
         sshpass -p "$PUB400_PASSWORD" ssh -o StrictHostKeyChecking=no -p 2222 $PUB400_USERNAME@$PUB400_HOST "git --version && pwd && cd /home/ravi1/cmpsys && export CURLIB=RAVI1 && makei build"
